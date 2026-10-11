@@ -1,0 +1,158 @@
+ /* Estilos para el diseñador mejorado */
+#designer-container {
+    background-color: #f8f9fa;
+    background-image: linear-gradient(45deg, #e9ecef 25%, transparent 25%), 
+                      linear-gradient(-45deg, #e9ecef 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #e9ecef 75%), 
+                      linear-gradient(-45deg, transparent 75%, #e9ecef 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    min-height: 600px;
+    padding: 2rem;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-wrapper {
+    display: inline-block;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0.15rem 0.75rem 0 rgba(58, 59, 69, 0.1);
+}
+
+#canvas-container {
+    position: relative;
+    background: white;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    overflow: visible;
+}
+
+#canvas-container canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+
+/* Guías de alineación */
+.guide {
+    position: absolute;
+    background-color: rgba(78, 115, 223, 0.5);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.guide-horizontal {
+    height: 1px;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.guide-vertical {
+    width: 1px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+/* Estilos para los botones de herramientas */
+.btn-tool {
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.btn-tool:hover {
+    background-color: #f8f9fa;
+    transform: translateX(3px);
+}
+
+.btn-tool.active {
+    background-color: #4e73df;
+    color: white !important;
+}
+
+/* Panel de propiedades */
+.property-group {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.property-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.property-group h6 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #b7b9cc;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* Mejoras en los inputs */
+.form-control-sm {
+    font-size: 0.75rem;
+}
+
+.input-group-text {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Barra de estado */
+#selected-element-info {
+    font-weight: 600;
+}
+
+/* Efecto de arrastrar y soltar */
+.drag-over {
+    box-shadow: 0 0 0 2px #4e73df;
+}
+
+/* Transiciones suaves */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll personalizado */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
