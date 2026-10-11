@@ -28,3 +28,7 @@ modulo/
 3. Apuntar el servidor web a `public/`.
 
 Los archivos volcados en `uploads/` y `logs/` no se versionan.
+
+## Contexto
+
+Proyecto de práctica inicial de PHP + MySQL sobre XAMPP: aplicación por módulos con front controller.
