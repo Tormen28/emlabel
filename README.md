@@ -32,3 +32,20 @@ Los archivos volcados en `uploads/` y `logs/` no se versionan.
 ## Contexto
 
 Proyecto de práctica inicial de PHP + MySQL sobre XAMPP: aplicación por módulos con front controller.
+
+
+## ⚙️ Instalación
+
+Este proyecto **no trae credenciales**. Los datos de conexión viven en `app/config/config.local.php`,
+que está en `.gitignore` y nunca se sube al repositorio.
+
+```bash
+# 1. Copia el ejemplo
+copy app\config\config.example.php app\config\config.local.php
+
+# 2. Edita app/config/config.local.php con tus datos de MySQL
+
+# 3. Importa emlabel_app.sql en phpMyAdmin
+
+# 4. Abre http://localhost/emlabel/
+```

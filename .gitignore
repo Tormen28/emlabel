@@ -1,6 +1,23 @@
-logs/
-uploads/
-*.log
-.DS_Store
-.env
+# Credenciales locales — NUNCA se versionan
 config.local.php
+app/config/config.local.php
+.env
+.env.*
+
+# Restos de sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+logs/
+.vscode/
+
+# Dependencias
+vendor/
+node_modules/
+
+# Respaldos locales
+*.rar
+*.zip
+*.bak
+*.tmp
